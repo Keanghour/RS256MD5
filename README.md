@@ -52,10 +52,24 @@ java RSAWithMD5Encrypt
 java RSAWithMD5Decrypt
 ```
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## Contact
+
+- Email: phokeanghour12@gmail.com
+- Telegram: [@phokeanghour](https://t.me/phokeanghour)
+
+<a href="https://t.me/phokeanghour" target="_blank" rel="noreferrer">
+    <img src="https://www.vectorlogo.zone/logos/telegram/telegram-ar21.svg" />
+</a>
+
+<a href="https://www.linkedin.com/in/pho-keanghour-27133b21b/" target="_blank" rel="noreferrer">
+    <img src="https://www.vectorlogo.zone/logos/linkedin/linkedin-ar21.svg" />
+</a>
 
 ---
 
-Feel free to modify it according to your project’s specifics, like the key file paths or any additional requirements.
+**Credit**: This project was created by **Pho Keanghour**.
+
+---
+
+Let me know if this works! | Feel free to modify it according to your project’s specifics, like the key file paths or any additional requirements.
