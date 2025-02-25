@@ -1,0 +1,123 @@
+
+---
+
+# RSA with SHA-256 Encryption and Decryption
+
+This project demonstrates how to encrypt and decrypt data using **RSA encryption** along with **SHA-256 hashing** for integrity verification. It uses the **RSA/ECB/OAEPWithSHA-256AndMGF1Padding** cipher for encryption and decryption, providing robust security.
+
+## Features
+
+- Encrypt data using RSA with OAEP padding and SHA-256 for better security.
+- Hash the encrypted data using SHA-256.
+- Decrypt the data using the corresponding RSA private key and verify integrity using the SHA-256 hash.
+- Ensure that only valid (non-tampered) encrypted data is decrypted by verifying the hash before decryption.
+
+## Table of Contents
+
+- [Requirements](#requirements)
+- [Usage](#usage)
+- [File Structure](#file-structure)
+- [License](#license)
+
+---
+
+## Requirements
+
+To run this code, you need to have the following:
+
+- **Java 8 or later** (for Java SE libraries)
+- **RSA public and private keys** in PEM format (`publicKey.pem` and `privateKey.pem`)
+
+### How to Install Java:
+
+If you don't have Java installed on your system, follow the instructions based on your operating system:
+
+- **Windows**: Download and install the [JDK from Oracle](https://www.oracle.com/java/technologies/javase-jdk16-downloads.html).
+- **MacOS**: Use [Homebrew](https://brew.sh/) to install Java: `brew install openjdk`.
+- **Linux**: Use the package manager for your distribution to install Java, e.g., `sudo apt install openjdk-11-jdk`.
+
+---
+
+## Usage
+
+### 1. **Preparing RSA Keys**:
+
+Before running the code, you need to have the following RSA keys:
+
+- **Public Key (`publicKey.pem`)**: This key is used for encrypting data.
+- **Private Key (`privateKey.pem`)**: This key is used for decrypting data.
+
+To generate RSA keys using OpenSSL:
+
+```bash
+# Generate RSA private key
+openssl genpkey -algorithm RSA -out privateKey.pem -pkeyopt rsa_keygen_bits:2048
+
+# Generate RSA public key from private key
+openssl rsa -pubout -in privateKey.pem -out publicKey.pem
+```
+
+Ensure that the keys are stored in the same directory as the Java files, or provide the correct path to the keys when running the program.
+
+### 2. **Running the Code**:
+
+1. **Compile the Java files**:
+
+```bash
+javac RSAWithSHA256Encrypt.java RSAWithSHA256Decrypt.java
+```
+
+2. **Run the Encryption Program**:
+
+```bash
+java RSAWithSHA256Encrypt
+```
+
+This will:
+- Encrypt the `originalData` ("HelloWorld").
+- Compute the SHA-256 hash of the encrypted data.
+- Print both the encrypted data (in Base64) and the SHA-256 hash.
+
+Example output:
+```
+Encrypted Data: <Base64 Encrypted String>
+SHA-256 Hash of Encrypted Data: <SHA-256 Hash>
+```
+
+3. **Run the Decryption Program**:
+
+```bash
+java RSAWithSHA256Decrypt
+```
+
+This will:
+- Decrypt the data using the provided **private key**.
+- Verify the integrity of the encrypted data using the SHA-256 hash.
+- Print the decrypted data if the hash verification is successful.
+
+Example output:
+```
+Decrypted Data: HelloWorld
+```
+
+### 3. **Hash and Verify Process**:
+
+During decryption:
+- The provided SHA-256 hash is compared with the SHA-256 hash of the encrypted data.
+- If the hash verification is successful, the data is decrypted. Otherwise, an error message is shown.
+
+---
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+### Notes:
+- **Security Considerations**: Ensure that private keys are stored securely and not exposed in the codebase. It's recommended to use a **key management service (KMS)** for production environments.
+- **Key Rotation**: Regularly rotate encryption keys to reduce the risk of key compromise.
+
+---
+
+Let me know if you need anything else! This README should cover how to get started with your encryption and decryption logic.

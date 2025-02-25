@@ -1,0 +1,47 @@
+
+---
+
+# RSA Encryption for Secure Money Transfer
+
+This project demonstrates how to use **RSA encryption** for secure money transfer simulations. It consists of four Java files to manage key generation, encryption, decryption, and signing:
+
+## Files:
+1. **KeyPairGeneratorUtil.java** – Generates and saves RSA public and private key pair.
+2. **RSACryptoAlgorithm.java** – Contains logic for encrypting, decrypting, and signing messages.
+3. **Encryptor.java** – Encrypts a message using the RSA public key.
+4. **Decryptor.java** – Decrypts the encrypted message using the RSA private key.
+
+## Steps to Use:
+
+### 1. **Generate RSA Key Pair**
+   - Run `KeyPairGeneratorUtil.java` to generate an RSA key pair.
+   - This will create two files: `publicKey.ser` and `privateKey.ser` (which contain the public and private keys respectively).
+
+### 2. **Encrypt the Message**
+   - Run `Encryptor.java` to encrypt the transaction message (e.g., money transfer details) using the RSA **public key**.
+   - This will print the encrypted message.
+
+### 3. **Decrypt the Message**
+   - Run `Decryptor.java` to decrypt the message using the RSA **private key**.
+   - This will print the decrypted (original) message.
+
+## How It Works:
+- **RSA Encryption**: Data is encrypted using the **public key** and can only be decrypted using the **private key**.
+- **Digital Signature**: The message can be signed with the **private key** to ensure authenticity, and the signature can be verified using the **public key**.
+
+## Requirements:
+- JDK 8 or higher
+- Basic understanding of RSA encryption
+
+## Example Usage:
+1. **Generate Keys**: Run `KeyPairGeneratorUtil.java` to create keys.
+2. **Encrypt Data**: Run `Encryptor.java` to encrypt a message.
+3. **Decrypt Data**: Run `Decryptor.java` to decrypt the message.
+
+## Security Notes:
+- Store your keys securely. Never share the **private key**.
+- This demo is for educational purposes. For production use, consider stronger key management practices.
+
+---
+
+This should give users a clear and quick understanding of how to use the code for secure data transfer.

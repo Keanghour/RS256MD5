@@ -1,0 +1,43 @@
+
+---
+
+# SHA-256 Hashing and Verification in Java
+
+This project contains two Java files that demonstrate how to generate SHA-256 hashes and verify data against a precomputed SHA-256 hash.
+
+## Files:
+1. **SHA256HashingFile.java**: Generates the SHA-256 hash for a given string.
+2. **SHA256VerifyFile.java**: Verifies if a given string matches a precomputed SHA-256 hash.
+
+## Setup Instructions:
+
+### 1. **Generate SHA-256 Hash**:
+- Open **SHA256HashingFile.java**.
+- Modify the `data` string with the text you want to hash.
+- Run the file to generate the SHA-256 hash.
+
+```java
+String data = "HelloWorld";  // Modify with your data
+```
+
+### 2. **Verify SHA-256 Hash**:
+- Open **SHA256VerifyFile.java**.
+- Modify the `data` string with the text you want to verify.
+- Modify the `givenHash` with the precomputed SHA-256 hash.
+- Run the file to check if the data matches the hash.
+
+```java
+String data = "HelloWorld";  // Input data to verify
+String givenHash = "a591a6d40bf420404a011733cfb7b190d62c65bf0bcda79cb3db6bfcfe1e6b0f";  // Precomputed SHA-256 hash
+```
+
+### Output:
+- **SHA256HashingFile.java**: Prints the SHA-256 hash.
+- **SHA256VerifyFile.java**: Prints `true` if the hashes match or `false` if they do not.
+
+## License:
+This project is open-source and free to use.
+
+---
+
+Let me know if you need any other edits!

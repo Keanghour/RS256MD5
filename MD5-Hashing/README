@@ -1,0 +1,79 @@
+
+---
+
+# MD5 Hashing and Verification in Java
+
+This project contains two Java files that demonstrate how to generate MD5 hashes and verify data against precomputed MD5 hashes.
+
+## Files Included:
+1. **HashingFile.java**: This file contains code to hash a given string using the MD5 algorithm.
+2. **VerifyFile.java**: This file contains code to verify if a given string matches a precomputed MD5 hash.
+
+## Prerequisites:
+- Java Development Kit (JDK) 8 or higher installed on your machine.
+
+## Setup Instructions:
+
+### 1. **HashingFile.java**
+This file hashes a given string using the MD5 algorithm.
+
+- **Functionality**:
+  - Takes an input string (e.g., "HelloWorld").
+  - Computes its MD5 hash and prints the result.
+
+### 2. **VerifyFile.java**
+This file verifies if the MD5 hash of a given string matches a precomputed hash.
+
+- **Functionality**:
+  - Takes an input string and a precomputed MD5 hash.
+  - Verifies if the MD5 hash of the input string matches the given hash and returns `true` or `false`.
+
+## Instructions:
+
+### 1. **To Generate an MD5 Hash:**
+- Open the **HashingFile.java** file.
+- Modify the `data` string with the text you want to hash.
+- Run the file, and the MD5 hash of the input string will be printed to the console.
+
+```java
+String data = "HelloWorld";  // Modify this with your data
+```
+
+### 2. **To Verify an MD5 Hash:**
+- Open the **VerifyFile.java** file.
+- Modify the `data` string with the text you want to verify.
+- Modify the `givenHash` string with the MD5 hash you want to check against.
+- Run the file, and the console will output `true` if the hash matches or `false` if it does not.
+
+```java
+String data = "HelloWorld";  // The input string you want to verify
+String givenHash = "fc3ff98e8c6a0d3087d515c0473f8677";  // Precomputed MD5 hash
+```
+
+### Sample Output for **VerifyFile.java**:
+If the data matches the given hash:
+```
+true
+```
+
+If the data does not match the given hash:
+```
+false
+```
+
+## Example:
+1. **HashingFile.java**
+   - Input: "HelloWorld"
+   - Output (MD5 hash): `fc3ff98e8c6a0d3087d515c0473f8677`
+
+2. **VerifyFile.java**
+   - Input data: "HelloWorld"
+   - Precomputed hash to verify: `fc3ff98e8c6a0d3087d515c0473f8677`
+   - Output: `true` (if the hash matches)
+
+## License:
+This project is open source. Feel free to modify and use it for your own purposes.
+
+---
+
+Let me know if you need any changes to this!
